@@ -1,29 +1,24 @@
 import React from "react";
-import ReactDom from "react-dom";
+import ReactDom from "react-dom/client";
+
+import { Enjoy,UseCard } from "./Enjoy";
+import Product, {Navbar}from "./Product"
 
 const root = ReactDom.createRoot(document.getElementById("root"));
 
-function Greating() {
-  const name = false;
+// function Greating() {
+//   const name = false;
 
-  return <h1>{name ? "soy un nazi 😆" : "no soy un nazi 😶"}</h1>;
-}
+//   return <h1>{name ? "soy un nazi 😆" : "no soy un nazi 😶"}</h1>;
+// }
 
-function Enjoy() {
-    function add(x,y){
-        return x + y
-    }
 
-    return <h1>{add(10,45)}</h1>
-       
-    
-   
-  }
 
 root.render(
   <>
+  <Navbar/>
     <Enjoy />
-    <Enjoy />
-    <Enjoy />
+    <UseCard />
+    <Product />
   </>
 );
